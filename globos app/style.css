@@ -1,0 +1,52 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.icono{
+	position: fixed;
+	font-size: 30px;
+
+	/*Permiten animar la transición entre un estilo CSS y otro*/
+	/*el primer parámetro (animation-name) caer es el keyframe que va a ejecutar*/
+	/*el segundo parámetro (animation-duration) 3s Indica la cantidad de tiempo que la animación consume en completar su ciclo (duración)*/
+	/*el tercer parámetro (animation-timing-function) linear indica que la velocidad será la misma de principio a fin*/
+	/*el cuarto parámetro (animation-fill-mode) forwards indica que la animación quedará con los valores y estilos que le aplique el último keyframe de la ejecución de la animación*/		
+	animation: subida 3s linear forwards; 
+}
+
+.contenedor{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100vh;
+}
+	
+	.contenedor button{
+		margin: 5px;
+		font-size: 15px;
+		padding: 5px;
+		background: purple;
+		color: white;
+	}
+
+		.contenedor button:hover{
+			background: red;
+			color: yellow;
+		}
+
+/*Animación que va desde el estado from hasta to*/
+@keyframes subida {
+
+	from{
+		transform: translateY(110vh);
+	}
+
+	to{
+		transform: translateY(-10vh);
+	}
+
+}
